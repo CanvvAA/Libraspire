@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibrAspire - Find and Borrow Books Easily</title>
+    <link rel="stylesheet" href="aspire.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 id="logo">LibrAspire</h1>
+            <nav class="navbar">
+                <a href="#" class="nav-link active">Home</a> |
+                <a href="#" class="nav-link">Catalog</a> |
+                <a href="#" class="nav-link">About</a> |
+                <a href="#" class="nav-link">Contact</a>
+            </nav>
+            <div class="auth-buttons">
+                <button id="loginBtn" class="btn btn-outline">Login</button>
+                <button class="btn btn-primary">Register</button>
+            </div>
+            <p class="tagline"><strong>Temukan</strong> dan <em>pinjam</em> buku dengan mudah.<br>Lebih dari 12.000 buku tersedia.</p>
+        </div>
+        <hr>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h2 class="hero-title">Find and Borrow Books Easily</h2>
+                <p class="hero-subtitle">Access thousands of books anytime, anywhere.</p>
+                <img class="hero-image" src="aset/logo 2.png" alt="Digital Library Illustration" width="600">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search by title, author, or category...">
+                    <button id="searchBtn" class="btn btn-primary">Cari</button>
+                    <button onclick="sapa()" class="btn btn-outline mt-4">Klik Saya</button>
+                </div>
+                <!-- Shape dekoratif -->
+                <img class="shape shape-1" src="" alt="">
+                <img class="shape shape-2" src="" alt="">
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories">
+            <div class="container">
+                <h2 class="section-title">Book Categories</h2>
+                <ul class="categories-list">
+                    <li class="category-item">Technology (2,500 books)</li>
+                    <li class="category-item">Science (1,800 books)</li>
+                    <li class="category-item">Novel (4,200 books)</li>
+                    <li class="category-item">Business (1,500 books)</li>
+                    <li class="category-item">History (1,200 books)</li>
+                    <li class="category-item">Education (1,300 books)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Popular Books Section -->
+        <section class="popular-books">
+            <div class="container">
+                <h2 class="section-title">Popular Books</h2>
+                <div class="books-grid">
+                    <article class="book-card">
+                        <img class="book-cover" src="aset/the subtle.jpg" alt="Book cover">
+                        <h3 class="book-title">The Subtle Art of Not Giving a F*ck</h3>
+                        <p class="book-author">Penulis: Mark Manson (2016)</p>
+                        <p class="book-status">Status: <span class="badge available">Available</span></p>
+                    </article>
+                    <article class="book-card">
+                        <img class="book-cover" src="aset/atomic.jpg" alt="Book cover">
+                        <h3 class="book-title">Atomic Habits</h3>
+                        <p class="book-author">Penulis: James Clear (2018)</p>
+                        <p class="book-status">Status: <span class="badge available">Available</span></p>
+                    </article>
+                     <article class="book-card">
+                        <img class="book-cover" src="aset/cover 3.jpg" alt="Book cover">
+                        <h3 class="book-title">3726 mdpl</h3>
+                        <p class="book-author">Penulis: Nurwina Sari (2024)</p>
+                        <p class="book-status">Status: <span class="badge available">Available</span></p>
+                    </article>
+                     <article class="book-card">
+                        <img class="book-cover" src="aset/cover 2.jpg" alt="Book cover">
+                        <h3 class="book-title">Animal Farm</h3>
+                        <p class="book-author">Penulis: George Orwell (1945)</p>
+                        <p class="book-status">Status: <span class="badge available">Available</span></p>
+                    </article>
+                     <article class="book-card">
+                        <img class="book-cover" src="aset/cover 1.jpg" alt="Book cover">
+                        <h3 class="book-title">Pulang-Pergi</h3>
+                        <p class="book-author">Penulis: Tere Liye (2021)</p>
+                        <p class="book-status">Status: <span class="badge available">Available</span></p>
+                    </article>
+                    <!-- Tambahkan buku lainnya di sini dengan struktur yang sama -->
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="how-it-works">
+            <div class="container">
+                <h2 class="section-title">How It Works</h2>
+                <div class="step">
+                    <span class="step-number">1. Register</span> - Buat akun gratis.
+                </div>
+                <div class="step">
+                    <span class="step-number">2. Search Book</span> - Temukan buku yang diinginkan.
+                </div>
+                <div class="step">
+                    <span class="step-number">3. Request Borrow</span> - Ajukan peminjaman.
+                </div>
+                <div class="step">
+                    <span class="step-number">4. Pick Up Book</span> - Ambil buku di perpustakaan.
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section class="statistics">
+            <div class="container">
+                <h2 class="section-title">Statistics</h2>
+                <div class="stats-grid">
+                    <p class="stat-item"><strong>12.500+</strong> Books</p>
+                    <p class="stat-item"><strong>3.200+</strong> Members</p>
+                    <p class="stat-item"><strong>850+</strong> Monthly Borrows</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <form id="contactForm" class="contact-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan:</label>
+                        <textarea id="message" name="message" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <hr>
+            <p>&copy; 2026 LibrAspire. <span>All rights reserved.</span></p>
+            <p class="footer-links">
+                <a href="mailto:support@libraspire.com">Email</a> |
+                <a href="#" target="_blank">Twitter</a> |
+                <a href="#" target="_blank">Facebook</a> |
+                <a href="https://www.instagram.com/cana.nael" target="_blank">Instagram</a>
+            </p>
+            <address>
+                Jl Raya ITS, Surabaya, Indonesia
+            </address>
+        </div>
+    </footer>
+
+    <script>
+        let nama = "cana";
+        let umur = 20;
+        let isMember = true;
+
+        console.log("Nama", nama);
+        console.log("Umur:", umur);
+        console.log("Status Member", isMember );
+
+        function sapa() {
+    alert("Selamat datang di LibrAspire!");
+}
+
+const logo = document.getElementById("logo");
+logo.addEventListener("click", function() {
+    alert("Logo diklik!");
+});
+
+const navLinks = document.querySelectorAll('.nav-link');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // mencegah scroll ke #
+        // Hapus class aktif dari semua menu
+        navLinks.forEach(l => l.classList.remove('text-primary', 'font-bold'));
+        // Tambah class ke menu yang diklik
+        this.classList.add('text-primary', 'font-bold');
+    });
+});
+
+const badges = document.querySelectorAll(".badge");
+
+badges.forEach(badge => {
+    badge.addEventListener("click", function() {
+        if (this.innerText === "Available") {
+            this.innerText = "Borrowed";
+            this.classList.remove("bg-green-100", "text-green-800");
+            this.classList.add("bg-red-100", "text-red-800");
+        } else if (this.innerText === "Borrowed") {
+            this.innerText = "Available";
+            this.classList.remove("bg-red-100", "text-red-800");
+            this.classList.add("bg-green-100", "text-green-800");
+        }
+    });
+});
+
+const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn");
+const books = document.querySelectorAll(".book-card");
+
+function filterBooks() {
+    const keyword = searchInput.value.toLowerCase();
+
+    books.forEach(book => {
+        const title = book.querySelector("h3").innerText.toLowerCase();
+        if (title.includes(keyword)) {
+            book.style.display = "block";
+        } else {
+            book.style.display = "none";
+        }
+    });
+}
+
+searchBtn.addEventListener("click", filterBooks);
+searchInput.addEventListener("keyup", filterBooks);
+    
+    const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", function(e) {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (name === "") {
+        alert("Nama wajib diisi!");
+        e.preventDefault();
+        return;
+    }
+    if (email === "") {
+        alert("Email wajib diisi!");
+        e.preventDefault();
+        return;
+    }
+    if (!email.includes("@") || !email.includes(".")) {
+        alert("Format email tidak valid!");
+        e.preventDefault();
+        return;
+    }
+    if (message === "") {
+        alert("Pesan wajib diisi!");
+        e.preventDefault();
+        return;
+    }
+
+    alert("Pesan berhasil dikirim (demo)");
+    e.preventDefault(); // untuk demo, cegah submit asli
+});
+
+const loginBtn = document.getElementById("loginBtn");
+
+loginBtn.addEventListener("click", function() {
+    const username = prompt("Masukkan username:");
+    const password = prompt("Masukkan password:");
+
+    if (username === "admin" && password === "123") {
+        alert("Login berhasil! Selamat datang, " + username);
+        loginBtn.innerText = "Logout";
+        loginBtn.classList.remove("btn-outline", "bg-transparent", "border", "border-border-color");
+        loginBtn.classList.add("btn-primary", "bg-primary", "text-white");
+    } else {
+        alert("Username atau password salah!");
+    }
+});
+
+    </script>
+</body>
+</html>
